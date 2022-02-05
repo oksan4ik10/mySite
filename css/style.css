@@ -1,0 +1,228 @@
+@import url(../fonts/Georgia/stylesheet.css);
+@import url('../fonts/Lato/stylesheet.css');
+
+*{
+    font-family: 'Lato-Medium';
+    color: #292929;
+}
+.container{
+    max-width: 1650px;
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+.logo{
+    font-family: 'Lato-ExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 27px;
+    line-height: 93%;
+    color: #2E9E8F;
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.btn{
+    background: #2E9E8F;
+    border: 1px solid #2E9E8F;
+    border-radius: 4px;
+    color:#FFFFFF ;
+    padding: 13px 50px;
+}
+
+/*================ header============ */
+.header{
+    background: #EAF3F9;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 43px;
+    padding-bottom: 43px;
+}
+.header__menu{
+    margin: 0;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 0.8;
+    padding: 0;
+}
+.menu__item{
+    list-style: none;
+    height: 100%;
+}
+.menu__link{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    letter-spacing: 0.3em;
+}
+.menu__link::after{
+    display: block;
+    content: "";
+    height: 1px;
+    position: absolute;
+    width: 0;
+    left: 50%;
+    background-color: #292929;
+    transform: translateX(-50%);
+    transition: 0.5s;
+
+}
+.menu__link:hover::after{
+    width: 100%;
+}
+.menu-mobile{
+    display: none;
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+}
+.menu-mobile:hover{
+    cursor: pointer;
+}
+
+.menu-mobile>.menu-mobile__line{
+    width: 40px;
+    background-color: #292929;
+    height: 2px;
+    position: absolute;
+ 
+}
+
+.menu-mobile>.menu-mobile__line::after, .menu-mobile>.menu-mobile__line::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    display: block;
+    width:100%;
+    background-color: #292929;
+    transition: 0.3s;
+
+}
+.menu-mobile>.menu-mobile__line::after{
+    top: 10px;
+}
+.menu-mobile>.menu-mobile__line::before{
+    top: -10px;
+}
+.menu-mobile>.close{
+    height: 0;
+}
+.menu-mobile>.close::before, .menu-mobile>.close::after{
+    top: 0;
+    transition: 0.3s;
+}
+.menu-mobile>.close::before{
+    transform: rotate(45deg);
+}
+.menu-mobile>.close::after{
+    transform: rotate(-45deg);
+
+}
+
+@media(max-width: 947px){
+    .container{
+        max-width: 800px;
+    }
+    .header__container {
+        padding-top: 20px;
+        padding-bottom: 10px;
+
+    }
+    .menu{
+        padding: 0 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .menu__item{
+        margin-bottom: 10px;
+        padding-right: 20px;
+        text-align: center;
+    }
+}
+@media(max-width: 675px){
+    .header__container{
+        padding-bottom: 20px;
+    }
+
+    .menu{
+        display: none;
+        position: fixed;
+        padding: 20px;
+        top: 50px;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        background-color: #EAF3F9;
+    }
+    .menu.menu__open{
+        display: block;
+    }
+    .menu-mobile{
+        display: flex;        
+
+    }
+    .header__btn{
+     display: none;
+    }
+
+}
+
+
+/* ===============main=============== */
+.main{
+    background-image: url('../img/main/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top -100px left 0px;
+
+
+}
+.main__container{
+    padding: 139px 0px 240px 0px;
+}
+.main__content{
+
+    margin-left: 140px;
+    max-width: 684px;
+    background: #EAF3F9;
+    border-radius: 66px;
+    padding: 50px;
+}
+.main__content>*:not(:last-child){
+    margin-bottom: 20px;
+}
+.main__heading{
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 61px;
+    color: #2E9E8F;
+}
+.main__text{
+    font-family: Lato;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 130%;
+    color: #484848;
+}
