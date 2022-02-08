@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <div class="container header__container">
-            <div class="header__logo logo">KalininaTeach</div>
+            <a href="#" class="header__logo logo">KalininaTeach</a>
             <ul class="header__menu menu">
                 <li class="menu__item"><a href="#" class="menu__link">Кто я?</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">Направления</a></li>
@@ -34,11 +34,30 @@
                 <h1 class="main__heading">Программирование
                     с нуля</h1>
                 <p class="main__text">Меня зовут Оксана и я помогаю начинающим программистам войти в IT-сферу</p>
-                <button class="btn main__btn">Выбрать направление</button>
+                <a href="#" class="btn main__btn">Записаться на занятие</a>
             </div>
          
         </div>
     </main>
+
+    <div class="modal">
+        <div class="modal__close"></div>
+        <div class="modal__container">
+            <h2 class="modal__title">У вас есть вопросы?</h2>
+            <p class="modal__subtitle">Заполните форму ниже и я свяжусь с Вами в ближайшее время</p>
+            <form action="" class="modal__form">
+                <input type="text" class="modal__input" placeholder="Как вас зовут?">
+                <input type="tel" class="modal__input modal__tel" placeholder="Телефон">
+                <input type="email" class="modal__input modal__email" placeholder="Email">
+                <div>                    
+                    <input type="checkbox" class="modal__check" name="modal__check" id="modal__check" checked>
+                    <label for="modal__check"><a href="#" class="modal__politic">Я согласен с политикой кофиденциальности</a></label>
+                </div>
+     
+                <button class="btn">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
 
 
     <script src="js/main.js"></script>
