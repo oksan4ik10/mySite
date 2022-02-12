@@ -3,7 +3,9 @@ menu = document.querySelector('.menu'),
 menuMobileLine = document.querySelector('.menu-mobile__line'),
 modal = document.querySelector('.modal'),
 modalClose = document.querySelector('.modal__close'),
-headerBtn = document.querySelector('.header__btn');
+headerBtn = document.querySelector('.header__btn'),
+mainBtn = document.querySelector('.main__btn'),
+modalTitle = document.querySelector('.modal__title');
 
 //открытие меню для мобилки
 menuMobile.addEventListener('click', ()=>{
@@ -16,6 +18,12 @@ menuMobile.addEventListener('click', ()=>{
 headerBtn.addEventListener('click',()=>{
     modal.style.display = 'flex';
 })
-modalClose.addEventListener('click',()=>{
+modalClose.addEventListener('click',(event)=>{
     modal.style.display = 'none';
+})
+
+//открытие модалки по кнопке Запись
+mainBtn.addEventListener('click',()=>{
+    modal.style.display = 'flex';
+    modalTitle.textContent = 'Записаться на занятие';
 })
