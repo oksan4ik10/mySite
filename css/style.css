@@ -323,9 +323,7 @@ a{
 }
 @media (max-width:1300px){
     .main{
-        background: linear-gradient(100.25deg, #BFDCF0 0.77%, #BFDCF0 41.84%, rgba(234, 243, 249, 0.3) 73.69%, rgba(255, 255, 255, 0) 100%) no-repeat, url('../img/main/bg.png') no-repeat;
-        background-position: left, center right -300px;
-        background-size: auto, cover;
+        background-size: 130%;
     
        
     }
@@ -363,6 +361,11 @@ a{
 }
 
 @media(max-width: 700px){
+    .main{
+        background-size: 140%;
+        background-position: left top 40px;
+    }
+
     .main__container{
           display: flex;
         flex-direction: row;
@@ -390,12 +393,8 @@ a{
 
     }
 }
-@media(max-width: 650px){
-    .main{
-        background-position: left, center right -170px;
-    }
-}
-@media(max-width: 550px){
+
+@media(max-width: 600px){
     .main{
         background-image: url('../img/main/bg-mobile.png');
         background-size: 300%;
@@ -555,10 +554,6 @@ a{
 
 }
 
-.cards__item {
-}
-.item {
-}
 .item__heading {
     display: flex;
     align-items: center;
