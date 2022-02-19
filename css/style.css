@@ -331,9 +331,7 @@ a{
 }
 
 @media (max-width:1000px) {
-    .main{
-        background-position: left, center right -200px;
-    }
+
     .main__container{
         padding: 139px 0px 139px 0px;
     }
@@ -360,7 +358,7 @@ a{
     
 }
 
-@media(max-width: 700px){
+@media(max-width: 720px){
     .main{
         background-size: 140%;
         background-position: left top 40px;
@@ -442,10 +440,6 @@ a{
     grid-gap: 50px ;
     position: relative;
     align-items: start;
-
-}
-
-.works__heading {
 
 }
 
@@ -677,6 +671,122 @@ a{
 }
 
 
+/*============== about============= */
+.about {
+    background: #3E5361;
+    position: relative;
+    height: 100%;
+}
+
+.about__container {
+    padding: 103px 5px;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    grid-column-gap: 150px;
+
+}
+.about__desk{
+
+}
+.about__ellipse{
+    position: absolute;
+    left: 0px;
+    object-fit: cover;
+    top: -20px;
+    width:55%;
+    
+    overflow: hidden;
+}
+.about__desk * {
+    color: #E5E5E5;
+    margin-left: 50px;
+
+}
+.title {
+}
+.about__title {
+    margin-bottom: 24px;
+  
+   
+}
+.about__list {
+    list-style-position: outside;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 60px;
+}
+.about__item {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 157%;
+
+}
+.about__btn {
+    position: relative;
+    z-index: 2;
+}
+.btn {
+}
+.about__slider {
+    width: 100%;
+    max-height: 716px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+.slider {
+    position: relative;
+   
+}
+.slider__arrows{
+    position: absolute;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+  
+}
+.arrow{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    
+    
+}
+
+.points{
+    width: 100%;
+    padding-bottom: 47px;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    align-items: end;
+    justify-content: center;
+    display: flex;
+
+}
+.points__item.active{
+    background: rgba(46, 158, 143, 0.5);
+}
+.points__item{
+    width: 30px;
+    height: 30px;
+    border: 5px solid #3E5361;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+
+}
+.points__item:not(:last-child){
+    margin-right: 18px;
+}
+
+
+
+
 
 /*============== modal============ */
 .modal{
@@ -781,3 +891,5 @@ a{
     background-color: #2E9E8F;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
   }
+
+
