@@ -1108,6 +1108,121 @@ a.btn{
 }
 
 
+/*===========footer==============*/
+.footer {
+    background-color: #3E5361;
+    color: #FFFFFF;
+    font-size: calc(14px + (22 - 14) * ((100vw - 320px) / (1920 - 320)));
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.footer a{
+    color: #FFFFFF;
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+.footer__logo {
+}
+
+.footer__nav {
+}
+.nav {
+}
+.nav__list {
+    list-style: none;
+    padding: 0;
+}
+.nav__item {
+}
+.nav__link {
+}
+.footer__docs {
+}
+.docs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.docs__item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+.footer__social {
+ 
+}
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.social__text {
+    color: #FFFFFF;
+    margin-right: 17px;
+    
+}
+.social__link {
+}
+.social__images{
+    display: flex;
+   
+}
+.social__images>*:not(:last-child){
+    margin-right: 17px;
+}
+.social__img {
+    width: calc(42px + (42 - 20) * ((100vw - 320px) / (1920 - 320)));
+}
+@media(max-width:1300px){
+
+    .social__text {
+        margin-right: 0px;
+        
+    }
+    .docs {
+        align-items: center;
+        text-align: center;
+        font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1300 - 320)));
+        letter-spacing: 0.01em;
+    }
+
+    .docs>*:not(:last-child){
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 960px){
+    .footer__container {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap:10px;
+        justify-items: center;
+    }
+    .footer__social{
+        grid-column: 2/3;
+    }
+    .social__text {
+        margin-right: 10px;
+        
+    }
+    
+}
+
+@media (max-width: 500px){
+    .footer__container {
+        grid-template-columns: 1fr;
+        
+        
+    }
+    .footer__social{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin-top: 10px;
+    }
+}
 
 /*============== modal============ */
 .modal{
