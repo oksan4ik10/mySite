@@ -27,3 +27,22 @@ mainBtn.addEventListener('click',()=>{
     modal.style.display = 'flex';
     modalTitle.textContent = 'Записаться на занятие';
 })
+
+
+//плавный скролл
+const menuItems = document.querySelectorAll('.menu__link');
+
+
+menu.addEventListener('click',(event)=>{
+    event.preventDefault();
+    const target = event.target;
+    if (!target.matches('.menu__link'))  return;
+    const idItem = target.getAttribute('href');
+    item = document.querySelector(idItem);
+    let block = 'end';
+    if((idItem == '#works') || (idItem == '#about')){
+        block = 'start';
+    }
+    item.scrollIntoView({block: block, behavior: "smooth"});
+    
+})
