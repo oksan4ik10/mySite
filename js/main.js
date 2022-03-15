@@ -2,9 +2,8 @@ const menuMobile = document.querySelector('.menu-mobile'),
 menu = document.querySelector('.menu'),
 menuMobileLine = document.querySelector('.menu-mobile__line'),
 modal = document.querySelector('.modal'),
+btn = document.querySelectorAll('.btn'),
 modalClose = document.querySelector('.modal__close'),
-headerBtn = document.querySelector('.header__btn'),
-mainBtn = document.querySelector('.main__btn'),
 modalTitle = document.querySelector('.modal__title');
 
 //открытие меню для мобилки
@@ -14,19 +13,20 @@ menuMobile.addEventListener('click', ()=>{
 })
 
 
-//открытие модального окна по кнопке Связаться
-headerBtn.addEventListener('click',()=>{
-    modal.style.display = 'flex';
-})
+
 modalClose.addEventListener('click',(event)=>{
     modal.style.display = 'none';
 })
 
-//открытие модалки по кнопке Запись
-mainBtn.addEventListener('click',()=>{
-    modal.style.display = 'flex';
-    modalTitle.textContent = 'Записаться на занятие';
-})
+btn.forEach(item => {
+    item.addEventListener('click',(event)=>{
+       if (!event.target.matches('.btn__record, .btn__contact')) return;
+       event.preventDefault();
+       modal.style.display = 'flex';
+       if (event.target.matches('.btn__record')) modalTitle.textContent = 'Записаться на занятие';
+    })
+    
+});
 
 
 //плавный скролл
@@ -45,4 +45,14 @@ menu.addEventListener('click',(event)=>{
     }
     item.scrollIntoView({block: block, behavior: "smooth"});
     
+})
+
+//слайдер
+const slider = document.querySelector('.slider');
+
+slider.addEventListener('click',(event)=>{
+    const target = event.target;
+    if (!target.matches('slider__arrows')) return;
+    console.log(12);
+
 })

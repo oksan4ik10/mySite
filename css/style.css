@@ -1,15 +1,11 @@
-@import url(../fonts/Georgia/stylesheet.css);
+@import url('../fonts/Georgia/stylesheet.css');
 @import url('../fonts/Lato/stylesheet.css');
 
 *{
     font-family: 'Lato-Medium';
     color: #292929;
 }
-body{
-    scroll-behavior: smooth;
-    height: 100%;
-    overflow-y: scroll;
-}
+
 .container{
     max-width: 1650px;
     box-sizing: content-box;
